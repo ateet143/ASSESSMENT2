@@ -50,9 +50,17 @@ namespace AstronomicalProcessing
 
         private void ListBoxHours_Click(object sender, EventArgs e)
         {
-            int current = int.Parse(ListBoxHours.SelectedItem.ToString());
-            int idx = ListBoxHours.Items.IndexOf(current);
-            TextBoxHours.Text = hours[idx].ToString();
+            if (ListBoxHours.SelectedItem != null)
+            {
+                int current = int.Parse(ListBoxHours.SelectedItem.ToString());
+                int idx = ListBoxHours.Items.IndexOf(current);
+                TextBoxHours.Text = hours[idx].ToString();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Select a value from the List";
+            }
+           
         }
 
         private void ButtonAutofill_Click(object sender, EventArgs e)
