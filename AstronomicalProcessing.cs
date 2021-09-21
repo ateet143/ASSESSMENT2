@@ -68,9 +68,22 @@ namespace AstronomicalProcessing
             //FR:1 To display the random number from 10 to 99.
             nextIndex = 24;
             Random rand = new Random();
+
             for (int i = 0; i < nextIndex; i++)
             {
-                hours[i] = rand.Next(10, 100);
+                int random = rand.Next(10, 100);
+                if (hours.Contains(random))
+                {
+                    i--;
+
+                }
+                else
+                {
+                    hours[i] = random;
+                }
+
+
+
             }
 
             DisplayNumber();
@@ -232,7 +245,7 @@ namespace AstronomicalProcessing
             //FR:5 Code must generate a message if the search is successful.
             if (found)
             {
-                MessageBox.Show(target + " number is found", 
+                MessageBox.Show(target + " number is found",
                     "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             //FR:5 Code must generate a message if the search is not successful.
@@ -260,7 +273,7 @@ namespace AstronomicalProcessing
                 e.Handled = true;
             toolStripStatusLabel1.Text = "Only digit accepted, not letter or alphabet";
 
-           
+
         }
     }
 
