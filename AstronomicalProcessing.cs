@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 using System.Windows.Forms;
 // Atit Singh/Satbir Singh,Team:CSharpPerth, Sprint 1
-// Date: 15/09/2021
-// Version:1
+// Date: 21/09/2021
+// Version:2
 // AstronomicalProcessing
 // This is a form-based application which displays the hours in a listbox, user can able to add, delete and search the data.
 // Inputs, Processes, Outputs
@@ -40,14 +40,12 @@ namespace AstronomicalProcessing
         int nextIndex = 0;
         private void DisplayNumber()
         {
-
             ListBoxHours.Items.Clear();
             for (int i = 0; i < nextIndex; i++)
             {
                 ListBoxHours.Items.Add(hours[i]);
             }
         }
-
         private void ListBoxHours_Click(object sender, EventArgs e)
         {
             if (ListBoxHours.SelectedItem != null)
@@ -58,7 +56,7 @@ namespace AstronomicalProcessing
             }
             else
             {
-                toolStripStatusLabel1.Text = "Select a value from the List";
+                toolStripStatusLabel1.Text = "Select a number from the List";
             }
 
         }
@@ -68,7 +66,6 @@ namespace AstronomicalProcessing
             //FR:1 To display the random number from 10 to 99.
             nextIndex = 24;
             Random rand = new Random();
-
             for (int i = 0; i < nextIndex; i++)
             {
                 int random = rand.Next(10, 100);
@@ -81,11 +78,7 @@ namespace AstronomicalProcessing
                 {
                     hours[i] = random;
                 }
-
-
-
             }
-
             DisplayNumber();
         }
         #endregion
@@ -105,25 +98,28 @@ namespace AstronomicalProcessing
                         hours[nextIndex] = number;
                         nextIndex++;
                         DisplayNumber();
-                        TextBoxHours.Clear();
-                        TextBoxHours.Focus();
+                        TextBoxClearFocus();
                     }
                     else
                     {
                         MessageBox.Show("Duplicate number, Enter different number!",
                          "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        TextBoxClearFocus();
                     }
                    
                 }
                 catch (IndexOutOfRangeException)
                 {
-                    MessageBox.Show("Sorry,List exceed the limit of 24 numbers",
+                    MessageBox.Show("Input exceed the limit of 24 numbers",
                         "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBoxClearFocus();
                 }
-                catch (OverflowException)
+               
+                catch (FormatException)
                 {
-                    MessageBox.Show("Sorry,Number too big to be accepted",
-                        "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid input,Enter numbers only",
+                       "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBoxClearFocus();
                 }
 
             }
@@ -151,8 +147,7 @@ namespace AstronomicalProcessing
 
                         int.TryParse(TextBoxHours.Text, out hours[idx]);
                         DisplayNumber();
-                        TextBoxHours.Clear();
-                        TextBoxHours.Focus();
+                        TextBoxClearFocus();
                     }
                     else
                     {
@@ -163,8 +158,8 @@ namespace AstronomicalProcessing
                 }
                 else
                 {
-                    MessageBox.Show("Duplicate number, Enter different number!",
-                                             "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    toolStripStatusLabel1.Text = "Duplicate number, Enter different number!";
+                    TextBoxHours.Focus();
                 }
                
 
@@ -188,14 +183,11 @@ namespace AstronomicalProcessing
                     toolStripStatusLabel1.Text = "Number has been Deleted";
                     nextIndex--;
                     DisplayNumber();
-                    TextBoxHours.Clear();
-                    TextBoxHours.Focus();
+                    TextBoxClearFocus();
                 }
                 else
                 {
-
                     toolStripStatusLabel1.Text = "User had cancelled to Delete";
-
                 }
 
             }
@@ -206,7 +198,7 @@ namespace AstronomicalProcessing
         }
         #endregion
 
-        #region Sort and Search
+        #region SORT and SEARCH
         //FR:3 sort method using the Bubble Sort algorithm.Sorting in Ascending order
         private void Sort()
         {
@@ -235,67 +227,72 @@ namespace AstronomicalProcessing
         //FR:5 search method using the Binary Search algorithm.
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
-
             Sort();
-            int target = int.Parse(TextBoxHours.Text);
-            int min = 0;
-            int max = nextIndex - 1;
-            int mid = 0;
-            bool found = false;
-
-            while (min <= max)
+            if (!string.IsNullOrEmpty(TextBoxHours.Text))
             {
+                int target = int.Parse(TextBoxHours.Text);
+                int min = 0;
+                int max = nextIndex - 1;
+                int mid = 0;
+                bool found = false;
 
-                mid = (min + max) / 2;
-                if (target == hours[mid])
+                while (min <= max)
                 {
-                    found = true;
-                    break;
+
+                    mid = (min + max) / 2;
+                    if (target == hours[mid])
+                    {
+                        found = true;
+                        break;
+                    }
+                    else if (target.CompareTo(hours[mid]) < 0)
+                    {
+                        max = mid - 1;
+                    }
+                    else
+                    {
+                        min = mid + 1;
+                    }
                 }
-                else if (target.CompareTo(hours[mid]) < 0)
+                //FR:5 Code must generate a message if the search is successful.
+                if (found)
                 {
-                    max = mid - 1;
+                    MessageBox.Show(target + " is located in line " + (mid + 1),
+                        "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                //FR:5 Code must generate a message if the search is not successful.
                 else
                 {
-                    min = mid + 1;
+                    MessageBox.Show("Number not found",
+                        "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
             }
-            //FR:5 Code must generate a message if the search is successful.
-            if (found)
-            {
-                MessageBox.Show(target + " number is found",
-                    "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            //FR:5 Code must generate a message if the search is not successful.
             else
             {
-                MessageBox.Show("Number not found",
-                    "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                toolStripStatusLabel1.Text = "Search Failed: Please enter numbers into text box";
 
+            }
         }
         #endregion
 
-
-
-
+        #region UTILITIES
         private void AstronomicalProcessing_MouseMove(object sender, MouseEventArgs e)
         {
             toolStripStatusLabel1.Text = "";
         }
-
         private void TextBoxHours_KeyPress(object sender, KeyPressEventArgs e)
         {
             TextBoxHours.MaxLength = 2;
             if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
             toolStripStatusLabel1.Text = "Only digit accepted, not letter or alphabet";
-
-
         }
+        private void TextBoxClearFocus()
+        {
+            TextBoxHours.Clear();
+            TextBoxHours.Focus();
+        }
+        #endregion
     }
-
-
-
 }
