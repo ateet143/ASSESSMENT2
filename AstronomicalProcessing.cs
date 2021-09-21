@@ -60,7 +60,7 @@ namespace AstronomicalProcessing
             {
                 toolStripStatusLabel1.Text = "Select a value from the List";
             }
-           
+
         }
 
         private void ButtonAutofill_Click(object sender, EventArgs e)
@@ -93,20 +93,23 @@ namespace AstronomicalProcessing
                     TextBoxHours.Clear();
                     TextBoxHours.Focus();
                 }
-                catch(IndexOutOfRangeException)
+                catch (IndexOutOfRangeException)
                 {
-                    MessageBox.Show("Sorry,List exceed the limit of 24 numbers");
+                    MessageBox.Show("Sorry,List exceed the limit of 24 numbers",
+                        "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (OverflowException)
                 {
-                    MessageBox.Show("Sorry,Number too big to be accepted");
+                    MessageBox.Show("Sorry,Number too big to be accepted",
+                        "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             // FR:2 The program must generate an error message if the text box is empty.
             else
             {
-                MessageBox.Show("Blank space detected!Please input number in the Box.");
+                MessageBox.Show("Blank space detected!Please input number in the Box.",
+                    "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -170,6 +173,7 @@ namespace AstronomicalProcessing
             }
         }
         #endregion
+
         #region Sort and Search
         //FR:3 sort method using the Bubble Sort algorithm.Sorting in Ascending order
         private void Sort()
@@ -228,12 +232,14 @@ namespace AstronomicalProcessing
             //FR:5 Code must generate a message if the search is successful.
             if (found)
             {
-                MessageBox.Show(target + " number is found");
+                MessageBox.Show(target + " number is found", 
+                    "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             //FR:5 Code must generate a message if the search is not successful.
             else
             {
-                MessageBox.Show("Number not found");
+                MessageBox.Show("Number not found",
+                    "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -249,9 +255,12 @@ namespace AstronomicalProcessing
 
         private void TextBoxHours_KeyPress(object sender, KeyPressEventArgs e)
         {
+            TextBoxHours.MaxLength = 2;
             if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
             toolStripStatusLabel1.Text = "Only digit accepted, not letter or alphabet";
+
+           
         }
     }
 
