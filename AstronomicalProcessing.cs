@@ -14,7 +14,7 @@ using System.Windows.Forms;
 // AstronomicalProcessing
 // This is a form-based application which displays the hours in a listbox, user can able to add, delete and search the data.
 // Inputs, Processes, Outputs
-//ACRONYMS: SP1:Sprint1, CR: Client Requirement , PR: functional requirement, NFR: Non-functional requirement
+//ACRONYMS: SP1:Sprint1, CR: Client Requirement , PR: program requirement, NFR: Non-functional requirement
 namespace AstronomicalProcessing
 {
     //CR: Name of the application should be Astronomical processing
@@ -100,11 +100,20 @@ namespace AstronomicalProcessing
                 try
                 {
                     int number = int.Parse(TextBoxHours.Text);
-                    hours[nextIndex] = number;
-                    nextIndex++;
-                    DisplayNumber();
-                    TextBoxHours.Clear();
-                    TextBoxHours.Focus();
+                    if (!hours.Contains(number))
+                    {
+                        hours[nextIndex] = number;
+                        nextIndex++;
+                        DisplayNumber();
+                        TextBoxHours.Clear();
+                        TextBoxHours.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Duplicate number, Enter different number!",
+                         "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                   
                 }
                 catch (IndexOutOfRangeException)
                 {
@@ -134,20 +143,30 @@ namespace AstronomicalProcessing
             {
                 int current = int.Parse(ListBoxHours.SelectedItem.ToString());
                 int idx = ListBoxHours.Items.IndexOf(current);
-                DialogResult modifyTask = MessageBox.Show("Do you want to Continue?", "It will permanently modify the data.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (modifyTask == DialogResult.Yes)
+                if (!hours.Contains(int.Parse(TextBoxHours.Text)))
                 {
-                    int.TryParse(TextBoxHours.Text, out hours[idx]);
-                    DisplayNumber();
-                    TextBoxHours.Clear();
-                    TextBoxHours.Focus();
+                    DialogResult modifyTask = MessageBox.Show("Do you want to Continue?", "It will permanently modify the data.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (modifyTask == DialogResult.Yes)
+                    {
+
+                        int.TryParse(TextBoxHours.Text, out hours[idx]);
+                        DisplayNumber();
+                        TextBoxHours.Clear();
+                        TextBoxHours.Focus();
+                    }
+                    else
+                    {
+
+                        toolStripStatusLabel1.Text = "User had cancelled to modify";
+
+                    }
                 }
                 else
                 {
-
-                    toolStripStatusLabel1.Text = "User had cancelled to modify";
-
+                    MessageBox.Show("Duplicate number, Enter different number!",
+                                             "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+               
 
             }
             else
