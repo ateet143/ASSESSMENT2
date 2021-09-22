@@ -1,0 +1,50 @@
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\Version1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.exe.config
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\Version1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.exe
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\Version1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.pdb
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.AstronomicalProcessing.resources
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.Properties.Resources.resources
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.GenerateResource.cache
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.CoreCompileInputs.cache
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.exe
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.pdb
+C:\Users\Administrator\source\repos\Version1\Version1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.exe.config
+C:\Users\Administrator\source\repos\Version1\Version1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.exe
+C:\Users\Administrator\source\repos\Version1\Version1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.pdb
+C:\Users\Administrator\source\repos\Version1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\Version1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.AstronomicalProcessing.resources
+C:\Users\Administrator\source\repos\Version1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.Properties.Resources.resources
+C:\Users\Administrator\source\repos\Version1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\Version1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\Version1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.exe
+C:\Users\Administrator\source\repos\Version1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.pdb
+C:\Users\Administrator\source\repos\Version1.1.1\Version1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.exe.config
+C:\Users\Administrator\source\repos\Version1.1.1\Version1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.exe
+C:\Users\Administrator\source\repos\Version1.1.1\Version1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.pdb
+C:\Users\Administrator\source\repos\Version1.1.1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\Version1.1.1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.AstronomicalProcessing.resources
+C:\Users\Administrator\source\repos\Version1.1.1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.Properties.Resources.resources
+C:\Users\Administrator\source\repos\Version1.1.1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\Version1.1.1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\Version1.1.1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.exe
+C:\Users\Administrator\source\repos\Version1.1.1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.pdb
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\Version1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.AssemblyReference.cache
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.exe.config
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.exe
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AstronomicalProcessing\bin\Debug\AstronomicalProcessing.pdb
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.AstronomicalProcessing.resources
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.Properties.Resources.resources
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.GenerateResource.cache
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csproj.CoreCompileInputs.cache
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.exe
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.pdb
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AstronomicalProcessing\obj\Debug\AstronomicalProcessing.csprojAssemblyReference.cache
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AllCodes\AstronomicalProcessing_Mapped\bin\Debug\AstronomicalProcessing.exe.config
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AllCodes\AstronomicalProcessing_Mapped\bin\Debug\AstronomicalProcessing.exe
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AllCodes\AstronomicalProcessing_Mapped\bin\Debug\AstronomicalProcessing.pdb
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AllCodes\AstronomicalProcessing_Mapped\obj\Debug\AstronomicalProcessing.csprojAssemblyReference.cache
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AllCodes\AstronomicalProcessing_Mapped\obj\Debug\AstronomicalProcessing.AstronomicalProcessing.resources
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AllCodes\AstronomicalProcessing_Mapped\obj\Debug\AstronomicalProcessing.Properties.Resources.resources
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AllCodes\AstronomicalProcessing_Mapped\obj\Debug\AstronomicalProcessing.csproj.GenerateResource.cache
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AllCodes\AstronomicalProcessing_Mapped\obj\Debug\AstronomicalProcessing.csproj.CoreCompileInputs.cache
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AllCodes\AstronomicalProcessing_Mapped\obj\Debug\AstronomicalProcessing.exe
+E:\SouthMetro\C# One\Assessment\Assessment2\Sprint1\AllCodes\AstronomicalProcessing_Mapped\obj\Debug\AstronomicalProcessing.pdb
